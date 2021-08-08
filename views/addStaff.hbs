@@ -1,0 +1,64 @@
+<h3>Add staff</h3>
+<div class="row">
+  <form action="/stories/add" method="POST" class="col s12">
+    <div class="row">
+      <div class="input-field">
+        <select name="personalTitle" id="status">
+          <option value="Mr" selected>Mr</option>
+          <option value="Ms">Ms</option>
+        </select>
+        <label for="status">Title</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field">
+        <input type="text" id="title" name="name" />
+        <label for="title">Name</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field">
+        <input type="email" id="title" name="email" />
+        <label for="title">Email</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field">
+        <input type="number" id="title" name="contact" />
+        <label for="title">Contact</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field">
+        <input type="date" id="title" name="dateOfBirth" />
+        <label for="title">Date of Birth</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field">
+        <select name="gender" id="status">
+          <option value="male" selected>Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <label for="status">Gender</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field">
+        <input type="text" id="title" name="address" />
+        <label for="title">Address</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field">
+        <input type="text" id="title" name="position" />
+        <label for="title">Position</label>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Save" class="btn" />
+      <a href="/view/staff" class="btn orange">Cancel</a>
+    </div>
+  </form>
+</div>

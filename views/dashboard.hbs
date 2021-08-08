@@ -1,0 +1,56 @@
+<h6>Dashboard</h6>
+<h3>Welcome</h3>
+<p>Here are your staff details</p>
+
+{{#if staffs}}
+  <div class="row">
+
+    <div class="input-field col s12">
+      <select id="gender" name="gender" onchange="genderSelect()">
+        <option value="" disabled selected>Choose your option</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      <label>Gender</label>
+    </div>
+    <div class="input-field col s12">
+      <select id="position" name="position" onchange="positionSelect()">
+        <option value="" disabled selected>Choose your option</option>
+        <option value="ceo">ceo</option>
+        <option value="manager">Manager</option>
+        <option value="employee">Employee</option>
+      </select>
+      <label>Position</label>
+    </div>
+    <a id="btn" class="waves-effect waves-light btn">Filter</a>
+  </div>
+
+  <table class="striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Date of Birth</th>
+        <th>Gender</th>
+        <th>Position</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each staffs}}
+        <tr>
+          <td>{{personalTitle}} {{name}}</td>
+          <td>{{email}}</td>
+          <td>{{formatDate dateOfBirth "MMMM Do YYYY"}}</td>
+          <td>{{gender}}</td>
+          <td>{{position}}</td>
+          <td></td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+{{else}}
+  <p>You dont have a staff</p>
+
+{{/if}}
